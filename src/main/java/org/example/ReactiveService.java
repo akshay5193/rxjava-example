@@ -1,15 +1,13 @@
 package org.example;
 
 import io.reactivex.Observable;
-import io.reactivex.Scheduler;
 import org.springframework.stereotype.Controller;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 @Controller
-public class ReactiveController {
+public class ReactiveService {
 
     /*
     Change "jumped" to "jumps" to get a full alphabetical list.

@@ -19,7 +19,7 @@ public class RxJavaExampleApplication {
 
 
     @Bean
-    public CommandLineRunner demo(ReactiveController controller) {
+    public CommandLineRunner demo(ReactiveService controller) {
 
         return (args) -> {
 
