@@ -19,29 +19,29 @@ public class RxJavaExampleApplication {
 
 
     @Bean
-    public CommandLineRunner demo(ReactiveService controller) {
+    public CommandLineRunner demo(ReactiveService service) {
 
         return (args) -> {
 
             logger.info("***** getWords *****");
-            controller.getWords().subscribe(messages ->
+            service.getWords().subscribe(messages ->
                     messages.stream()
                             .forEach(message -> logger.info(message)));
 
             /*logger.info("***** getNumberedWords *****");
-            controller.getNumberedWords().subscribe(message ->
+            service.getNumberedWords().subscribe(message ->
                     logger.info(message));*/
 
             /*logger.info("***** getLetters *****");
-            controller.getLetters().subscribe(message ->
+            service.getLetters().subscribe(message ->
                     logger.info(message));*/
 
             /*logger.info("***** getUniqueLetters *****");
-            controller.getUniqueLetters().subscribe(message ->
+            service.getUniqueLetters().subscribe(message ->
                     logger.info(message));*/
 
             /*logger.info("***** getUniqueSortedLetters *****");
-            controller.getUniqueSortedLetters().subscribe(message ->
+            service.getUniqueSortedLetters().subscribe(message ->
                     logger.info(message));*/
         };
     }
